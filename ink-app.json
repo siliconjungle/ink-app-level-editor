@@ -1,0 +1,62 @@
+{
+  "slug": "level-editor",
+  "title": "Level Editor",
+  "repository": "https://github.com/siliconjungle/ink-app-level-editor",
+  "directory": "web",
+  "entry": "index.html",
+  "desktop": {
+    "entry": "level-editor",
+    "context": "self",
+    "icon": "web/icon.svg",
+    "window": {
+      "width": 1280,
+      "height": 800
+    },
+    "dropTypes": [
+      "image/png",
+      "image/jpeg",
+      "image/webp",
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".webp",
+      ".inkmap",
+      "application/zip"
+    ]
+  },
+  "capabilities": [
+    "world.read",
+    "world.write",
+    "desktop.open"
+  ],
+  "commands": [
+    {
+      "id": "new-map",
+      "title": "New tile map…",
+      "description": "Choose the dimensions of a new shared map.",
+      "inputs": [],
+      "handler": {
+        "type": "open"
+      }
+    },
+    {
+      "id": "settings",
+      "title": "Map settings",
+      "description": "Edit the current map settings.",
+      "inputs": [],
+      "handler": {
+        "type": "open"
+      }
+    },
+    {
+      "id": "fit",
+      "title": "Fit map to window",
+      "description": "Show the entire current map.",
+      "inputs": [],
+      "handler": {
+        "type": "open"
+      }
+    }
+  ],
+  "commandsClient": "commands.mjs"
+}
